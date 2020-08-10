@@ -1,0 +1,87 @@
+﻿@model Minesweeper.Models.Game
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Button</title>
+    <style>
+        .CustomerLabel {
+            font-size: 18px;
+            font-family: Arial;
+            font-weight: bold;
+            color: blue;
+            text-align: left;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm("HandleButtonClick", "Game"))
+        {
+            for (int r = 0; r < Model.board.Size; r++)
+            {
+                for (int c = 0; c < Model.board.Size; c++)
+                {
+
+                    String rowAndCol = r.ToString() + "|" + c.ToString();
+
+                    <button type="submit" name="mine" value=@rowAndCol>
+                         @if (!Model.board.theGrid[r, c].visited)
+                          {
+                             <img src="~/Images/box.png" />  }
+                          else if (Model.board.theGrid[r, c].live)
+                          {
+                             <img src="~/Images/mine.png" /> }
+                          else if (Model.board.theGrid[r, c].visited && Model.board.theGrid[r, c].liveNeighbors == 0)
+                          {
+                             <img src="~/Images/num0.png" /> }
+                          else if (Model.board.theGrid[r, c].visited && Model.board.theGrid[r, c].liveNeighbors == 1)
+                          {
+                             <img src="~/Images/num1.png" /> }
+                          else if (Model.board.theGrid[r, c].visited && Model.board.theGrid[r, c].liveNeighbors == 2)
+                          {
+                             <img src="~/Images/num2.png" /> }
+                          else if (Model.board.theGrid[r, c].visited && Model.board.theGrid[r, c].liveNeighbors == 3)
+                          {
+                             <img src="~/Images/num3.png" /> }
+                          else if (Model.board.theGrid[r, c].visited && Model.board.theGrid[r, c].liveNeighbors == 4)
+                          {
+                             <img src="~/Images/num4.png" /> }
+                          else if (Model.board.theGrid[r, c].visited && Model.board.theGrid[r, c].liveNeighbors == 5)
+                          {
+                             <img src="~/Images/num5.png" /> }
+                          else if (Model.board.theGrid[r, c].visited && Model.board.theGrid[r, c].liveNeighbors == 6)
+                          {
+                             <img src="~/Images/num6.png" /> }
+                          else if (Model.board.theGrid[r, c].visited && Model.board.theGrid[r, c].liveNeighbors == 7)
+                          {
+                             <img src="~/Images/num7.png" /> }
+                          else if (Model.board.theGrid[r, c].visited && Model.board.theGrid[r, c].liveNeighbors == 8)
+                          {
+                             <img src="~/Images/num8.png" /> }
+
+                    </button> }
+            <br />}
+        }
+    <div>
+        <h3>
+            @Html.ActionLink("Return To Menu", "Index", "Game")
+        </h3>
+    </div>
+
+    </div>
+</body>
+</html>
+ 
+
+
+   
+

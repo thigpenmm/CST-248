@@ -112,6 +112,21 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Images\box.png" />
+    <Content Include="Images\face1.png" />
+    <Content Include="Images\face2.png" />
+    <Content Include="Images\face3.png" />
+    <Content Include="Images\flag.png" />
+    <Content Include="Images\mine.png" />
+    <Content Include="Images\num0.png" />
+    <Content Include="Images\num1.png" />
+    <Content Include="Images\num2.png" />
+    <Content Include="Images\num3.png" />
+    <Content Include="Images\num4.png" />
+    <Content Include="Images\num5.png" />
+    <Content Include="Images\num6.png" />
+    <Content Include="Images\num7.png" />
+    <Content Include="Images\num8.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -130,12 +145,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\Board.cs" />
+    <Compile Include="Models\Cell.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Business\SecurityService.cs" />
@@ -155,6 +174,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Register\RegisterPassed.cshtml" />
     <Content Include="Views\Register\RegisterFailed.cshtml" />
+    <Content Include="Views\Game\Game.cshtml" />
+    <Content Include="Views\Game\Menu.cshtml" />
+    <Content Include="Views\Game\GameLost.cshtml" />
+    <Content Include="Views\Game\GameWon.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

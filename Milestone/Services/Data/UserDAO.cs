@@ -1,10 +1,7 @@
 ﻿using Minesweeper.Models;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 
 namespace Minesweeper.Services.Data
 {
@@ -83,7 +80,7 @@ namespace Minesweeper.Services.Data
 
                     // Open the connection and execute the insert method
                     cn.Open();
-                    int rows = cmd.ExecuteNonQuery();
+                    var rows = cmd.ExecuteNonQuery();
                     if (rows == 1)
                         result = true;
                     else

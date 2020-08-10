@@ -1,0 +1,26 @@
+﻿@model Minesweeper.Models.Game
+
+@{ ViewBag.Title = "Menu"; }
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Mineweeper</title>
+</head>
+<body>
+    <div>
+        <center>
+            <h1>Minesweeper</h1>
+            <h3>@Html.ActionLink("New Game", "Game", "Game")</h3>
+
+            <!-- Temporary placeholders until functions are created -->
+            <h3>Load Game</h3>
+            <h3>Highscores</h3>
+            <h3>Options</h3>
+
+            <h3> @Html.ActionLink("Logout", "Index", "Home") </h3>
+        </center>
+    </div>
+</body>
+</html>
